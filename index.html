@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Laktoferrin Bilgilendirme</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: linear-gradient(135deg, #1e1e1e, #292929);
+      background-attachment: fixed;
+      overflow-x: hidden;
+    }
+    .blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(100px);
+      opacity: 0.4;
+      z-index: 0;
+    }
+    .blob1 {
+      width: 300px;
+      height: 300px;
+      background: #00bcd4;
+      top: -50px;
+      left: -50px;
+    }
+    .blob2 {
+      width: 400px;
+      height: 400px;
+      background: #8bc34a;
+      bottom: -100px;
+      right: -100px;
+    }
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .scroll-container {
+      overflow: hidden;
+      position: relative;
+    }
+    .scroll-content {
+      display: flex;
+      width: fit-content;
+      white-space: nowrap;
+      animation: scroll 30s linear infinite;
+    }
+    .scroll-container:hover .scroll-content {
+      animation-play-state: paused;
+    }
+  </style>
+</head>
+<body class="relative min-h-screen flex flex-col items-center text-white font-sans px-4 py-10">
+
+  <!-- Arka Plan Blobs -->
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
+
+  <!-- Logo Alanı -->
+  <div class="z-10 text-center p-6">
+    <div class="mx-auto mb-6 w-32 h-32 bg-white rounded-full flex items-center justify-center shadow-lg">
+      <span class="text-black font-bold text-xl">LOGO</span>
+    </div>
+    <h1 class="text-3xl sm:text-4xl font-semibold tracking-wide">Laktoferrin Hakkında Bilgilendirme</h1>
+    <p class="mt-2 text-gray-300 text-lg max-w-md mx-auto">
+      Laktoferrin ile ilgili temel bilgiler ve bağışıklık sistemine etkileri
+    </p>
+  </div>
+
+  <!-- İçerik Kartı 1 -->
+  <div class="z-10 bg-white/10 border border-white/20 backdrop-blur-md rounded-2xl shadow-lg p-6 max-w-2xl w-full mt-10 text-left">
+    <h2 class="text-2xl font-semibold mb-4 text-white">Laktoferrin nedir ve temel olarak nereden elde edilir?</h2>
+    <p class="text-gray-200 leading-relaxed">
+      Laktoferrin, sütte bulunan demir taşıyan bir proteindir. En fazla da anne sütünde bulunur.
+      Ayrıca insan vücudunda tüm mukozal yüzeylerden salgılanır. En fazla anne sütünde
+      olmak üzere ağız, burun mukozası, akciğer zarı, mide, bağırsak mukozası, eklem sinovyal
+      sıvısı, sperm, vajinal sıvılar, beyin omurilik sıvısı gibi tüm vücut sıvılarında bulunur.
+      Takviyelerde kullanılan laktoferrin sığır sütünden izole edilir.
+    </p>
+  </div>
+
+  <!-- İçerik Kartı 2 -->
+  <div class="z-10 bg-white/10 border border-white/20 backdrop-blur-md rounded-2xl shadow-lg p-6 max-w-2xl w-full mt-10 text-left">
+    <h2 class="text-2xl font-semibold mb-4 text-white">Laktoferrinin bağışıklık sistemine etkisi</h2>
+    <p class="text-gray-200 leading-relaxed">
+      Laktoferrin, güçlü bağışıklık düzenleyici özelliklere sahip bir proteindir. Antibakteriyel, antiviral ve antifungal etkileriyle mikroorganizmaların çoğalmasını engeller.
+      Aynı zamanda bağışıklık hücrelerinin aktivitesini artırarak inflamasyonu dengeler ve vücudun savunma sistemini optimize eder.
+      Özellikle solunum yolları ve sindirim sistemi mukozalarında bağışıklık bariyerini güçlendirir.
+    </p>
+  </div>
+
+  <!-- Müşteri Yorumları Başlık -->
+  <div class="z-10 mt-16 mb-6 text-center">
+    <h2 class="text-2xl sm:text-3xl font-semibold text-white">Müşteri Yorumları</h2>
+  </div>
+
+  <!-- Kayar Yorumlar -->
+  <div class="scroll-container z-10 w-full max-w-6xl mx-auto mb-16">
+    <div class="scroll-content space-x-6">
+      <img src="yorum1.jpg" alt="Yorum 1" class="h-40 rounded-xl shadow-md" />
+      <img src="yorum2.jpg" alt="Yorum 2" class="h-40 rounded-xl shadow-md" />
+      <img src="yorum3.jpg" alt="Yorum 3" class="h-40 rounded-xl shadow-md" />
+      <img src="yorum4.jpg" alt="Yorum 4" class="h-40 rounded-xl shadow-md" />
+      <img src="yorum5.jpg" alt="Yorum 5" class="h-40 rounded-xl shadow-md" />
+      <img src="yorum6.jpg" alt="Yorum 6" class="h-40 rounded-xl shadow-md" />
+      <!-- Tekrar için -->
+      <img src="yorum1.jpg" class="h-40 rounded-xl shadow-md" />
+      <img src="yorum2.jpg" class="h-40 rounded-xl shadow-md" />
+    </div>
+  </div>
+
+  <!-- Video Alanı -->
+  <div class="z-10 w-full max-w-6xl px-4 mb-16">
+    <h2 class="text-2xl sm:text-3xl font-semibold text-white text-center mb-6">Tanıtım Videoları</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+      <div class="aspect-w-16 aspect-h-12">
+        <iframe class="w-full h-full rounded-xl shadow-lg" src="https://www.youtube.com/embed/VIDEO_ID_1" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="aspect-w-16 aspect-h-12">
+        <iframe class="w-full h-full rounded-xl shadow-lg" src="https://www.youtube.com/embed/VIDEO_ID_2" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Satın Al ve WhatsApp Butonları -->
+  <div class="z-10 w-full max-w-4xl px-4 mt-10 mb-20 flex flex-col sm:flex-row items-center justify-center gap-6">
+    <a href="https://www.siteniz.com/satin-al" target="_blank" class="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-xl shadow-md transition duration-300 w-full sm:w-auto text-center flex items-center gap-2 justify-center">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 7M7 13l-2 6m5-6v6m4-6v6m4-6v6m-9 0a1 1 0 102 0 1 1 0 00-2 0z" />
+      </svg>
+      Satın Al
+    </a>
+
+    <a href="https://wa.me/90XXXXXXXXXX" target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-xl shadow-md transition duration-300 flex items-center gap-2 w-full sm:w-auto justify-center">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-5 h-5" />
+      WhatsApp ile İletişim
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer class="z-10 mt-auto text-sm text-gray-400 text-center mb-10">
+    © 2025 Laktoferrin Bilgilendirme. Tüm Hakları Saklıdır.
+  </footer>
+</body>
+</html>
